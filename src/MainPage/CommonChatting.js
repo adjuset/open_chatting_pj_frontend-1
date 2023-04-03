@@ -15,11 +15,15 @@ function CommonChatting() {
         setShow(true)
     };
 
+    const divStyle = {
+        display: "inline"
+    }
+    
     return(
-        <div>
+        <div style={divStyle}>
 
-            <div> 
-                <Button className="btn" variant="outline-primary" onClick={commonChattingBtn}>일반채팅</Button>{' '}
+
+            <Button className="btn" variant="outline-warning" onClick={commonChattingBtn}>일반채팅</Button>{' '}
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Header>
                         <Modal.Title>일반채팅</Modal.Title>
@@ -32,7 +36,6 @@ function CommonChatting() {
                     </Modal.Footer>
                     <Modal.Footer/>
                 </Modal>
-            </div>
             
         </div>
     )

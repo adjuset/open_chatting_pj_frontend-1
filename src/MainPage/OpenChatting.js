@@ -14,12 +14,15 @@ function OpenChatting() {
     const openchattingBtn = () => {
         setShow(true)
     };
+    const divStyle = {
+        display: "inline"
+    }
 
     return(
-        <div>
+        <div style={divStyle}>
+ 
+             <Button className="btn" variant="outline-warning" onClick={openchattingBtn}>오픈채팅</Button>{' '}
 
-            <div> 
-                <Button className="btn" variant="outline-primary" onClick={openchattingBtn}>오픈채팅</Button>{' '}
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Header>
                         <Modal.Title>오픈채팅</Modal.Title>
@@ -32,7 +35,7 @@ function OpenChatting() {
                     </Modal.Footer>
                     <Modal.Footer/>
                 </Modal>
-            </div>
+
         </div>
     )
 }
